@@ -832,7 +832,7 @@ void Packet::populateTableWidgetItem(QTableWidgetItem * tItem, Packet thepacket)
     tItem->setData(Packet::FROM_PORT,  thepacket.fromPort);
     tItem->setData(Packet::TCP_UDP,  thepacket.tcpOrUdp);
     tItem->setData(Packet::REPEAT,  thepacket.repeat);
-    tItem->setData(Packet::INCOMING,  thepacket.repeat);
+    tItem->setData(Packet::INCOMING,  thepacket.incoming);
     QByteArray thedata = thepacket.getByteArray();
     tItem->setToolTip("Data portion is " + QString::number(thedata.size()) + " bytes");
 }
